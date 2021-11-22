@@ -13,12 +13,11 @@ const Users = () => {
    
     useEffect(() => {
         dispatch(getUsers())
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const raiseAnErrorInSentry = () => {
-        alert("LOG IN TO SENTRY WITH YOUR GOOGLE ACCOUNT");
-        throw new Error("Some error generated on purpose generated from a hosted website.");
+        alert("ERROR GENERATED IN SENTRY.IO!");
+        throw new Error("Error generated from a netlify hosted website.");
     };
 
     return (

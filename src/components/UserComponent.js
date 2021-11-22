@@ -13,15 +13,17 @@ const Users = () => {
    
     useEffect(() => {
         dispatch(getUsers())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const raiseAnErrorInSentry = () => {
         alert("LOG IN TO SENTRY WITH YOUR GOOGLE ACCOUNT");
-        throw new Error("Some error generated on purpose from a hosted website.");
+        throw new Error("Some error generated on purpose generated from a hosted website.");
     };
 
     return (
         <>
+            <h1>React Redux Saga App</h1>
             <Button variant="primary" onClick={raiseAnErrorInSentry}>Raise Sentry Error</Button>
             {users.loading && <p>Loading...</p>}
 
